@@ -47,7 +47,6 @@ class ArtIssueFlowResponder(val flowSession: FlowSession): FlowLogic<SignedTrans
             override fun checkTransaction(stx: SignedTransaction) = requireThat {
                 val output = stx.tx.outputs.single().data
                 "This must be an Art transaction" using (output is ArtState)
-                "The outputState's artist must be mosasiru" using (output.artist == "mosasiru")
             }
         }
 
