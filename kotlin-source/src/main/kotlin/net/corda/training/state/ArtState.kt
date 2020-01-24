@@ -9,8 +9,8 @@ import net.corda.training.contract.ArtContract
 import java.util.*
 
 @BelongsToContract(ArtContract::class)
-data class ArtState(val artist: String,
-                    val title: String,
+data class ArtState(val artist: String = "artist",
+                    val title: String = "title",
                     val appraiser: Party,
                     val owner: Party,
                     override val linearId: UniqueIdentifier = UniqueIdentifier()): LinearState {
