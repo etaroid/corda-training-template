@@ -431,7 +431,7 @@ public class IOUSettleTests {
 //                tx.input(IOUContract.IOU_CONTRACT_ID, iou);
 //                tx.input(Cash.class.getName(), fiveDollars);
 //                tx.output(Cash.class.getName(), fiveDollars.withNewOwner(ALICE.getParty()).getOwnableState());
-//                IOUState iouCopy = iou.copy(Currencies.DOLLARS(0), iou.lender, CHARLIE.getParty(), iou.paid).pay(Currencies.DOLLARS(5));
+//                IOUState iouCopy = iou.copy(Currencies.DOLLARS(0), iou.lender, iou.borrower, iou.paid).pay(Currencies.DOLLARS(5));
 //                tx.output(IOUContract.IOU_CONTRACT_ID, iouCopy);
 //                tx.command(BOB.getPublicKey(), new Cash.Commands.Move());
 //                tx.command(Arrays.asList(BOB.getPublicKey(), ALICE.getPublicKey()), new IOUContract.Commands.Settle());
